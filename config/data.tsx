@@ -330,31 +330,34 @@ export const offres = [
   },
 ];
 
-export const galery = [
-  {
-    image: "/images/coworking/Espace Bulle Open space/img (1).jpg",
-  },
-  {
-    image: "/images/other/hall bulle 2.jpg",
-  },
-  {
-
-    image: "/images/other/bureau_equipe.jpg",
-  },
-  {
-    image: "/images/other/salle_reunion.jpg",
-
-  },
-  {
-    image: "/images/coworking/Espace Bulle Open space/img (1).jpg",
-  },
-  {
-    backgroundImage: "/images/other/hall bulle.jpg",
-    alt: "Description de l'image 1",
-  },
-];
-
-
+export const galery = {
+  title: "Notre Galerie",
+  description: "Plongez dans nos espaces à travers cette galerie.",
+  options: ["Les images des événements", "Les articles de presse"],
+  backgroundImage: "/images/other/bureau_equipe.jpg",
+  images: [
+      {
+          image: "/images/coworking/Espace Bulle Open space/img (1).jpg",
+          alt: "Espace Bulle Open Space",
+      },
+      {
+        image: "/images/other/hall bulle 2.jpg",
+          alt: "Hall Bulle 2",
+      },
+      {
+          image: "/images/other/bureau_equipe.jpg",
+          alt: "Bureau d'équipe",
+      },
+      {
+          image: "/images/other/salle_reunion.jpg",
+          alt: "Salle de réunion",
+      },
+      {
+          image: "/images/coworking/Espace Bulle Open space/img (1).jpg",
+          alt: "Espace Bulle Open Space",
+      },
+  ],
+};
 
 export const espaces = [
   {
