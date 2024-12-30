@@ -1,6 +1,7 @@
 import TitleSection from '@/components/title-section'
 import React from 'react'
 import GridPattern from "@/components/magicui/grid-pattern";
+import Image from 'next/image'; // Import Next.js Image component
 import { cn } from "@/lib/utils";
 
 
@@ -17,7 +18,7 @@ export default function ADM() {
                             <div className="relative flex justify-center items-center h-full z-[1] pt-8 px-8">
                                 <div className="w-full sm:max-w-[80%] md:max-w-[60%] border-2 shadow-2xl rounded-2xl lg:rounded-3xl border-white relative top-auto bottom-auto mx-auto
                 flex justify-center flex-col">
-                                    <img
+                                    <Image 
                                         alt="App screenshot"
                                         src="/images/coworkers/coworker (4).jpg"
                                         className="w-full h-full object-cover rounded-2xl lg:rounded-3xl"

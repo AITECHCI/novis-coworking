@@ -2,14 +2,14 @@ import React from "react";
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
-
+import Image from 'next/image'; // Import Next.js Image component
 import { cn } from "@/lib/utils";
 
 export default function DescriptionAllSpaces({ offre }: { offre: any }) {
   return (
     <section className="container min-h-[300px] mb-14 relative">
       <div className="relative gap-8 items-center md:items-stretch py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <img
+        <Image 
           className="w-full z-10 object-cover"
           src={offre.image}
           alt="dashboard image"
@@ -112,7 +112,7 @@ export default function DescriptionAllSpaces({ offre }: { offre: any }) {
                   key={key}
                   className="items-center flex flex-col bg-gray-50 rounded-lg shadow"
                 >
-                  <img
+                  <Image 
                     className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
                     src={avantage.image}
                     alt={avantage.image}

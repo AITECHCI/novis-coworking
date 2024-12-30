@@ -4,7 +4,7 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
-
+import Image from 'next/image'; // Import Next.js Image component
 import { cn } from "@/lib/utils"
 
 export default function Missiion_Charte() {
@@ -21,14 +21,14 @@ export default function Missiion_Charte() {
                         <p className='font-light text-sm text-gray-100 mb-4'><span className='font-semibold'>Promouvoir l&apos;innovation et l&apos;entrepreneuriat : </span>Encourager l&apos;innovation, la créativité et l&apos;entrepreneuriat en offrant un environnement propice à la transformation des idées en projets concrets.</p>
                     </div>
                     <div className="grid grid-cols-2 gap-4 mt-8">
-                        <img className="w-full rounded-lg row-span-2" src="/images/coworking/Bureaux privés/Bureau prospérité/img_p (3).jpg" alt="office content 1" />
-                        <img className="mt-4 w-full lg:mt-10 rounded-lg" src="/images/coworking/Espace Bulle Open space/img (1).jpg" alt="office content 2" />
-                        <img className="mt-4 w-full lg:mt-10 rounded-lg" src="/images/coworking/Bureaux privés/Bureau détermination/img (1).jpg" alt="office content 2" />
+                        <Image  className="w-full rounded-lg row-span-2" src="/images/coworking/Bureaux privés/Bureau prospérité/img_p (3).jpg" alt="office content 1" />
+                        <Image  className="mt-4 w-full lg:mt-10 rounded-lg" src="/images/coworking/Espace Bulle Open space/img (1).jpg" alt="office content 2" />
+                        <Image  className="mt-4 w-full lg:mt-10 rounded-lg" src="/images/coworking/Bureaux privés/Bureau détermination/img (1).jpg" alt="office content 2" />
                     </div>
                 </div>
             </div>
             <div className="relative gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-                <img className="w-full" src="/images/coworking/Bureaux privés/Bureau confiance/img (2).jpg" alt="dashboard image" />
+                <Image  className="w-full" src="/images/coworking/Bureaux privés/Bureau confiance/img (2).jpg" alt="dashboard image" />
                 <div className="mt-4 md:mt-0">
                     <h2 className="mb-4  text-2xl md:text-4xl tracking-tight font-saudagar">NOTRE CHARTE QUALITE</h2>
                     <p className="mb-6 font-light text-novis_orange text-lg">« A VOTRE SERVICE » </p>
