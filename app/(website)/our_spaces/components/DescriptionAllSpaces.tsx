@@ -1,11 +1,11 @@
-import TitleSection from '@/components/title-section'
-import React from 'react'
+import TitleSection from '@/components/title-section';
+import React from 'react';
 import { BorderBeam } from "@/components/magicui/border-beam";
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
-
-import { cn } from "@/lib/utils"
+import Image from 'next/image'; // Import Image from next/image
+import { cn } from "@/lib/utils";
 
 export default function DescriptionAllSpaces() {
     return (
@@ -13,7 +13,7 @@ export default function DescriptionAllSpaces() {
             <TitleSection title={"Nos différents espaces situés à Cocody"} />
 
             <div className="relative gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-                <img className="w-full" src="/images/coworking/Bureaux privés/Bureau confiance/img (1).jpg" alt="dashboard image" />
+                <Image className="w-full" src="/images/coworking/Bureaux privés/Bureau confiance/img (1).jpg" alt="dashboard image" />
                 <div className="mt-4 md:mt-0">
                     <h2 className="mb-4  text-2xl md:text-4xl tracking-tight font-saudagar">Bureaux privés</h2>
                     <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
@@ -57,11 +57,11 @@ export default function DescriptionAllSpaces() {
                         </div>
                     </Link>
                 </div>
-                <img className="w-full" src="/images/coworking/Espace Bulle Open space/img (1).jpg" alt="dashboard image" />
+                <Image className="w-full" src="/images/coworking/Espace Bulle Open space/img (1).jpg" alt="dashboard image" />
             </div>
 
             <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-                <img className="w-full" src="/images/coworking/Salle de réunion/img (1).jpg" alt="dashboard image" />
+                <Image className="w-full" src="/images/coworking/Salle de réunion/img (1).jpg" alt="dashboard image" />
                 <div className="mt-4 md:mt-0">
                     <h2 className="mb-4  text-2xl md:text-4xl tracking-tight font-saudagar">Salle de réunion</h2>
                     <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
@@ -105,7 +105,7 @@ export default function DescriptionAllSpaces() {
                         </div>
                     </Link>
                 </div>
-                <img className="w-full" src="/images/coworking/Espace commun/img (1).jpg" alt="dashboard image" />
+                <Image className="w-full" src="/images/coworking/Espace commun/img (1).jpg" alt="dashboard image" />
             </div>
 
             {/* <div className="bg-black">
