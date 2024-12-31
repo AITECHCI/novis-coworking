@@ -6,18 +6,18 @@ interface HeaderPageProps {
     title: string;
     description: string;
     options: string[];
-    backgroundImage: string; // Gardez ce champ si vous avez besoin de l'URL
+    backgroundImage: string; // Vous pouvez garder ce champ si vous avez besoin de l'URL
 }
 
 export default function HeaderPage({ title, description, options, backgroundImage }: HeaderPageProps) {
-    // Utilisez backgroundImage passé en prop ou la première image de galery.images
-    const imageUrl = backgroundImage || galery.images[0]?.image; // Utiliser le premier élément si backgroundImage est vide
+    // Supposons que vous souhaitiez utiliser la première image du tableau galery
+    const data = galery[0]; // Adaptez cela selon vos besoins
 
     return (
         <section className="relative">
             <div 
                 className="container px-0 relative max-w-[1400px] h-64" 
-                style={{ backgroundImage: `url(${imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                style={{ backgroundImage: `url(${data.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
                 <div className="relative z-[2] flex flex-col md:flex-row md:gap-x-8 justify-between bg-black/30 py-8 px-4 sm:py-16 lg:px-8">
                     <div className="max-w-screen-sm text-white text-center md:text-left">

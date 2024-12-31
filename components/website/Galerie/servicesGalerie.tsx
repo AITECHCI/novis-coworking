@@ -23,7 +23,7 @@ export default function SolutionsCarousel() {
       className="w-full max-w-7xl mx-auto"
     >
       <CarouselContent>
-        {galery.images.map((data, index) => ( // Accédez à galery.images
+        {galery.map((data, index) => (
           <CarouselItem
             key={index}
             className="sm:basis-1/2 relative lg:basis-1/4 sm:mx-2 lg:mx-1"

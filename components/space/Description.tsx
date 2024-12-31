@@ -1,7 +1,7 @@
 import React from 'react'
 import Galerie from '../Galerie';
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
-import Image from 'next/image'; // Import Next.js Image component
+
 import { cn } from "@/lib/utils"
 import {
     Card,
@@ -77,7 +77,7 @@ export default function Description(
                         }
                     </div>
                 </div>
-                <Image  className="w-full hidden md:block object-cover" src={space.images.map((image: any) => image.src)[0]} alt="dashboard image" />
+                <img className="w-full hidden md:block object-cover" src={space.images.map((image: any) => image.src)[0]} alt="dashboard image" />
             </div>
             {space.items && space.items.length > 0 ? (
                 <>

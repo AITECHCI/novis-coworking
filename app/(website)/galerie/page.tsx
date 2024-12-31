@@ -1,15 +1,21 @@
 import HeaderPage from "@/components/galerie/header-page"; 
 import Galerie from "@/components/website/Galerie/galerie";
-import { galery } from "@/config/data"; // Assurez-vous que le chemin d'importation est correct
+
+const offre = {
+    title: "Galerie de Photos",
+    description: "Découvrez notre collection de photos.",
+    options: ["Événement", "Article de presse"],
+    backgroundImage: "/images/background.jpg", 
+};
 
 export default function OurSpace() {
     return (
         <div>
             <HeaderPage 
-                title={galery.title} 
-                description={galery.description} 
-                options={galery.options} 
-                backgroundImage={galery.backgroundImage} 
+                title={offre.title} 
+                description={offre.description} 
+                options={offre.options} 
+                backgroundImage={offre.backgroundImage} 
             />
             <Galerie />
         </div>
