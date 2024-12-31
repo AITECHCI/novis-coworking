@@ -74,127 +74,109 @@ export const offres = [
       "Dans le cadre de l'immatriculation de votre entreprise au CEPICI pour obtenir une autorisation légale d'exercer votre activité en Côte-d'Ivoire il vous sera nécessaire de disposer d'un siège-social et de vous rattacher par la suite à un centre d'impôts ivoirien.",
       "Novis coworking met à votre disposition une adresse géographique. Grâce à la souscription d'un abonnement annuel vous obtenez un contrat qui vous permettra de compléter votre dossier auprès du notaire, de l'avocat ou l'expert en charge de faire la constitution de votre société à Abidjan.",
     ],
-    options: ["Siège social pour vous faire immatriculer", "Adresse physique pour votre entreprise"],
-    solutionsTitle:
-      "Du CLOUD à l'ECO et au FLEX, choisissez la solution sur-mesure qui vous convient le mieux.",
+    options: [
+      "Siège social pour vous faire immatriculer",
+      "Adresse physique pour votre entreprise",
+    ],
+    solutionsTitle: "Du CLOUD à l'ECO et au FLEX, choisissez la solution sur-mesure qui vous convient le mieux.",
     solutions: [
-      {
-        title: "CLOUD",
-        icon: "cloud",
-      },
-      {
-        title: "ECONOMIQUE",
-        icon: "eco",
-      },
-      {
-        title: "FLEX",
-        icon: "flex",
-      },
+      { title: "CLOUD", icon: "cloud" },
+      { title: "ECONOMIQUE", icon: "eco" },
+      { title: "FLEX", icon: "flex" },
     ],
     image: "/images/coworking/Espace Bulle Open space/img (1).jpg",
     elements: [
       {
-        icon: "🏢", // Représentation symbolique d'un bâtiment
+        icon: "🏢",
         title: "Domiciliation et gestion postale",
         description: "Mise à disposition d’une adresse prestigieuse dans un immeuble neuf accessible et sécurisé",
       },
       {
-        icon: "👥", // Représentation symbolique de personnes
+        icon: "👥",
         title: "Conciergerie et réservation de salles de réunion",
         description: "Contrat de domiciliation en moins d’une heure",
       },
       {
-        icon: "🤝", // Représentation symbolique d'une poignée de main
-        title: "Accès aux espaces networking de l'ensemble des parntenaires",
+        icon: "🤝",
+        title: "Accès aux espaces networking de l'ensemble des partenaires",
         description: "Mise à disposition de l’adresse pour tous les documents administratifs et commerciaux",
       },
       {
-        icon: "📶", // Représentation symbolique du WiFi
+        icon: "📶",
         title: "Connexion WiFi symétrique et redondante",
         description: "Permanence téléphonique et accueil physique des visiteurs",
       },
       {
-        icon: "☕", // Représentation symbolique d'une tasse de café
+        icon: "☕",
         title: "Espace d'accueil et réception",
         description: "Réception de courriers et petits colis",
       },
       {
-        icon: "📞", // Représentation symbolique d'un téléphone
+        icon: "📞",
         title: "Numéro téléphonique professionnel",
         description: "Accès à un bureau privé pendant 1H et la salle de réunion 1h",
       },
     ],
-    bookingLink:'/reservation-domiciliation'
+    bookingLink: '/reservation-domiciliation',
   },
   {
     id: "domiciliation_physique_entreprise",
     title: "Domiciliation physique",
-    subdescription:
-      "Profitez du confort et de l'ambiance dynamisante de notre espace de coworking.",
+    subdescription: "Profitez du confort et de l'ambiance dynamisante de notre espace de coworking.",
     description: [
-      "Dans un environnement où le coût de l'immobilier ne fait que s'accroître, il est important en tant qu'investisseur en côte d'ivoire, entrepreneur ou entreprises internationales de trouver des stratégies pour installer l'entreprise à moindre coût.",
+      "Dans un environnement où le coût de l'immobilier ne fait que s'accroître, il est important en tant qu'investisseur en Côte d'Ivoire, entrepreneur ou entreprise internationale de trouver des stratégies pour installer l'entreprise à moindre coût.",
       "Novis coworking vous aide à atteindre cet objectif en minimisant vos coûts. Offrez-vous le luxe de bénéficier d'un bureau élégant à Abidjan au sein d'un espace partagé avec une communauté (locaux, expatriés, repats) et bénéficiez d'un large réseau.",
-      "2 possibilités s'offrent à vous, le bureau privé ou l'espace open-space",
+      "2 possibilités s'offrent à vous, le bureau privé ou l'espace open-space.",
     ],
-    horraires: [
-      {
-        name: "Du lundi au vendredi",
-        horraire: "8h-17h et 17h-22h",
-      },
-      {
-        name: "Samedi",
-        horraire: "10h-17h",
-      },
-      {
-        name: "Dimanche",
-        horraire: "10h-14h",
-      },
+    horaires: [
+      { name: "Du lundi au vendredi", horraire: "8h-17h et 17h-22h" },
+      { name: "Samedi", horraire: "10h-17h" },
+      { name: "Dimanche", horraire: "10h-14h" },
     ],
     image: "/images/other/exterieur.jpg",
-
     elements: [
       {
-        icon: "⚡", // Représentation symbolique d'une icône d'électricité
+        icon: "⚡",
         title: "Charges comprises, travaux et maintenance",
         description: "Coûts de fonctionnement et entretien inclus",
       },
       {
-        icon: "🏢", // Représentation symbolique d'un bâtiment
+        icon: "🏢",
         title: "Domiciliation et gestion postale",
         description: "Service d'adresse professionnelle et gestion du courrier",
       },
       {
-        icon: "💻", // Représentation symbolique d'un ordinateur
+        icon: "💻",
         title: "Accès ultralarge et vidéosurveillance",
         description: "Connexion internet haut débit et sécurité",
       },
       {
-        icon: "👥", // Représentation symbolique de personnes
+        icon: "👥",
         title: "Conciergerie et réservation de salles de réunion",
         description: "Services d'assistance et réservation d'espaces",
       },
       {
-        icon: "🚲", // Représentation symbolique d'un vélo
-        title: "Equipements et services de la communauté",
+        icon: "🚲",
+        title: "Équipements et services de la communauté",
         description: "Accès aux installations partagées",
       },
       {
-        icon: "🤝", // Représentation symbolique d'une poignée de main
-        title: "Accès aux espaces networking de l'ensemble des parntenaires",
+        icon: "🤝",
+        title: "Accès aux espaces networking de l'ensemble des partenaires",
         description: "Opportunités de réseautage étendues",
       },
       {
-        icon: "📶", // Représentation symbolique du WiFi
+        icon: "📶",
         title: "Connexion WiFi symétrique et redondante",
         description: "Connectivité internet fiable et rapide",
       },
       {
-        icon: "☕", // Représentation symbolique d'une tasse de café
+        icon: "☕",
         title: "Espace d'accueil et réception",
         description: "Zone d'accueil professionnelle",
       },
       {
-        icon: "📞", // Représentation symbolique d'un téléphone
+        icon: "📞",
         title: "Numéro téléphonique professionnel",
         description: "Ligne téléphonique dédiée pour votre entreprise",
       },
@@ -205,36 +187,28 @@ export const offres = [
     title: "Location de bureau",
     subdescription: "Faites comme chez vous !",
     description: [
-      "Conscient du fait que toutes les entreprises n'ont pas les mêmes besoins et le même budget nous donnons la possibilité à chacun de pouvoir évoluer à son rythme. A L'heure, à la journée, à la semaine ou au mois venez comme vous êtes.",
-      "A chaque bureau son ambiance et son authenticité, choisissez qui vous va à l'instant en fonction de votre humeur pour votre bien être et une meilleure productivité. ",
+      "Conscient du fait que toutes les entreprises n'ont pas les mêmes besoins et le même budget, nous donnons la possibilité à chacun de pouvoir évoluer à son rythme. À l'heure, à la journée, à la semaine ou au mois, venez comme vous êtes.",
+      "À chaque bureau son ambiance et son authenticité, choisissez ce qui vous convient à l'instant en fonction de votre humeur pour votre bien-être et une meilleure productivité.",
     ],
-    horraires: [
-      {
-        name: "Du lundi au vendredi",
-        horraire: "8h-17h et 17h-22h",
-      },
-      {
-        name: "Samedi",
-        horraire: "10h-17h",
-      },
+    horaires: [
+      { name: "Du lundi au vendredi", horraire: "8h-17h et 17h-22h" },
+      { name: "Samedi", horraire: "10h-17h" },
     ],
     avantages: [
       {
-        title: "PRET A L'EMPLOI",
+        title: "PRÊT À L'EMPLOI",
         detail: "+ imprimante, wifi",
         image: "/images/coworking/Bureaux privés/Bureau prospérité/img1.jpg",
       },
       {
-        title: "VALEUR AJOUTEE",
-        detail:
-          "Gain de crédibilité pour le positionnement de votre entreprise.",
+        title: "VALEUR AJOUTÉE",
+        detail: "Gain de crédibilité pour le positionnement de votre entreprise.",
         image: "/images/coworking/Bureaux privés/Bureau confiance/img2.jpg",
       },
       {
-        title: "NOTORIETE",
+        title: "NOTORIÉTÉ",
         detail: "Un règlement en fonction de votre consommation.",
-        image:
-          "/images/coworking/Bureaux privés/Bureau détermination/img3.jpg",
+        image: "/images/coworking/Bureaux privés/Bureau détermination/img3.jpg",
       },
     ],
     image: "/images/other/bureau_equipe.jpg",
@@ -242,12 +216,11 @@ export const offres = [
   {
     id: "location_salle_de_reunion",
     title: "Salle de réunion",
-    subdescription:
-      "Louez une salle de réunion équipée pour vos rencontres professionnelles.",
+    subdescription: "Louez une salle de réunion équipée pour vos rencontres professionnelles.",
     description: [
       "Aménagées de manière ergonomique et confortable, notre salle de réunion avec sa capacité de 10 personnes minimum est entièrement équipée pour accueillir vos rencontres professionnelles abidjanaises.",
-      "Grâce à son accessibilité c'est l'emplacement rêvé pour organiser vos réunions, vos formations, vos masterclass. Vos convives, collaborateurs, clients ne pourraient être que ravis de cet endroit que nous nommons affectueusement le labo.",
-      "Ecrans, paperboard, stylos et accès wifi pour chaque participant.",
+      "Grâce à son accessibilité, c'est l'emplacement rêvé pour organiser vos réunions, vos formations, vos masterclass. Vos convives, collaborateurs, clients ne pourraient être que ravis de cet endroit que nous nommons affectueusement le labo.",
+      "Écrans, paperboard, stylos et accès wifi pour chaque participant.",
     ],
     tarifs: [
       {
@@ -268,11 +241,9 @@ export const offres = [
         ],
       },
     ],
-    optionsSup:
-      "Pour vous aider à vous concentrer exclusivement sur votre activité, nous vous proposons de nous confier l'organisation de vos petits-déjeuners, pauses café, déjeuners, etc.",
+    optionsSup: "Pour vous aider à vous concentrer exclusivement sur votre activité, nous vous proposons de nous confier l'organisation de vos petits-déjeuners, pauses café, déjeuners, etc.",
     options: ["Event planner", "Service premium"],
     image: "/images/other/salle_reunion.jpg",
-
   },
   {
     id: "location_espace_evenementiel",
@@ -280,9 +251,9 @@ export const offres = [
     subdescription: "Une occasion particulière ? Réservez une salle.",
     description: [
       "Notre Pack évènement vous permet d'organiser tous vos évènements professionnels à Abidjan.",
-      "La Côte d'Ivoire incontournable sur l'échiquier internationale du business vous donne en 2024 la possibilité de vous faire connaître ou de vous développer à travers l'organisation de conférences de presse, lancement de produits, vente privée, cérémonie de dédicace de livre, networking, vernissage, assemblées générales etc… ",
-      "Avec sa capacité de 25 à 50 personnes choisissez au sein du coworking abidjanais l'espace qui se prêtera au mieux au format de votre vision.",
-      "Bénéficiez d'un espace spacieux, sécurisé par un service de gardiennage agrée. Places de parking disponibles, Cuisine disponible",
+      "La Côte d'Ivoire incontournable sur l'échiquier international du business vous donne en 2024 la possibilité de vous faire connaître ou de vous développer à travers l'organisation de conférences de presse, lancement de produits, vente privée, cérémonie de dédicace de livre, networking, vernissage, assemblées générales etc… ",
+      "Avec sa capacité de 25 à 50 personnes, choisissez au sein du coworking abidjanais l'espace qui se prêtera au mieux au format de votre vision.",
+      "Bénéficiez d'un espace spacieux, sécurisé par un service de gardiennage agréé. Places de parking disponibles, cuisine disponible.",
     ],
     tarifs: [
       {
@@ -311,7 +282,7 @@ export const offres = [
     title: "Location espace tournage",
     subdescription: "Louez un espace décoré pour vos tournages et podcasts.",
     description: [
-      "Personal branding, Mise en scène clips vidéo et films, podcast, etc… sont des besoins de notre ère dans le cadre de la communication des activités d'une entreprise ou association.",
+      "Personal branding, mise en scène clips vidéo et films, podcast, etc. sont des besoins de notre ère dans le cadre de la communication des activités d'une entreprise ou association.",
       "Un espace unique décoré par des professionnels avec recherche, beaucoup de soin et de finesse, chaque mètre carré, mobilier, objets de décoration est mis à votre disposition pour le temps d'un tournage sur la capitale ivoirienne.",
       "Avec NOVIS coworking, ensemble vers le succès.",
     ],
