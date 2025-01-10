@@ -3,8 +3,8 @@ import Content from "./components/Content";
 import { espaces } from "@/config/data";
 
 export default async function ItemSpace({ params }: { params: { id: string } }) {
-  // Utiliser await pour accéder à params
-  const { id } = await params; // Correction ici
+  // Pas besoin d'utiliser await ici
+  const { id } = params;
 
   // Rechercher le groupe correspondant à l'ID
   const group = espaces.find((espace) => {

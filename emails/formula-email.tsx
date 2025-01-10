@@ -38,7 +38,7 @@ export const FormulaEmail: React.FC<FormulaEmailData> = ({
     <Preview>Confirmation de réservation - Formule {formulaName}</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Image
+        <Img
           src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/logo.png`}
           width="100"
           height="100"
@@ -47,7 +47,7 @@ export const FormulaEmail: React.FC<FormulaEmailData> = ({
         />
         <Heading style={heading}>Confirmation de réservation</Heading>
         <Section style={section}>
-          <Image
+          <Img
             src={`${process.env.NEXT_PUBLIC_BASE_URL}${formulaImage}`}
             width="600"
             height="300"
