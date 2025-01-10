@@ -1,24 +1,21 @@
 import HeaderPage from "./components/header-page";
 import Content from "./components/Content";
-import { datas, espaces } from "@/config/data";
+import { espaces } from "@/config/data";
 
-export default async function ItemSpace({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default async function ItemSpace({ params }: { params: { id: string } }) {
+  // Pas besoin d'utiliser await ici
+  const { id } = params;
+
+  // Rechercher le groupe correspondant à l'ID
   const group = espaces.find((espace) => {
     if (espace.items) {
-      return espace.items.find((espac) => espac.id == params.id);
+      return espace.items.find((espac) => espac.id === id); // Utilisation de ===
     }
-    return espace.id == params.id;
+    return espace.id === id; // Utilisation de ===
   });
 
-  const item = group
-    ? group.items
-      ? group.items.find((espac) => espac.id == params.id)
-      : group
-    : null;
+  // Trouver l'item dans le groupe
+  const item = group && group.items ? group.items.find((espac) => espac.id === id) : null;
 
   return (
     <div>

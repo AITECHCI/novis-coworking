@@ -228,7 +228,7 @@ export const offres = [
         title: "VALEUR AJOUTEE",
         detail:
           "Gain de crédibilité pour le positionnement de votre entreprise.",
-        image: "/images/coworking/Bureaux privés/Bureau confiance/img2.jpg",
+        image: "/images/coworking/Bureaux privés/Bureau confiance/img (2).jpg",
       },
       {
         title: "NOTORIETE",
@@ -330,27 +330,225 @@ export const offres = [
   },
 ];
 
-export const galery = [
+export const galeries = [
   {
+    id: "evenement_collaboratif",
+    title: "Événement Collaboratif",
+    subdescription: "Participez à notre événement inspirant.",
+    description: [
+      "Rejoignez-nous pour une expérience inoubliable au cœur de notre espace de coworking, NOVIS COWORKING. Cet événement exclusif mettra en lumière les opportunités de collaboration et de networking au sein de notre communauté dynamique.",
+    ],
+    images: [
+      {
+        src: "/images/galerie/evenements/even1.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even2.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even3.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even4.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even5.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even6.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even7.jpg",
+        width: 1037,
+        height: 691,
+
+      },
+      {
+        src: "/images/galerie/evenements/even8.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even9.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even10.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even11.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even12.jpg",
+        width: 1037,
+        height: 691,
+      },
+    ],
     image: "/images/coworking/Espace Bulle Open space/img (1).jpg",
   },
   {
-    image: "/images/other/hall bulle 2.jpg",
-  },
-  {
-
-    image: "/images/other/bureau_equipe.jpg",
-  },
-  {
-    image: "/images/other/salle_reunion.jpg",
-
-  },
-  {
+    id: "article_de_presse",
+    title: "Article de Presse",
+    subdescription: "Découvrez les dernières articles de presse.",
+    description: [
+      "Lisez sur notre espace de coworking à travers des articles de presse qui mettent en avant nos événements et notre communauté.",
+      "Ces articles soulignent les initiatives que nous prenons pour favoriser un environnement de travail collaboratif et innovant.",
+      "Restez informé des dernières tendances et opportunités dans le monde du coworking.",
+    ],
+    images: [
+      {
+        src: "/images/coworking/Bureaux privés/Bureau prospérité/img (1).jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/coworking/Bureaux privés/Bureau prospérité/img (2).jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/coworking/Bureaux privés/Bureau prospérité/img (3).jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/coworking/Bureaux privés/Bureau détermination/img (1).jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/coworking/Bureaux privés/Bureau détermination/img (2).jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/coworking/Bureaux privés/Bureau détermination/img (3).jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/coworking/Bureaux privés/Bureau confiance/img (1).jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/coworking/Bureaux privés/Bureau confiance/img (2).jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/coworking/Bureaux privés/Bureau confiance/img (3).jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/coworking/Bureaux privés/Bureau excellence/img (1).jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/coworking/Bureaux privés/Bureau excellence/img (2).jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/coworking/Bureaux privés/Bureau excellence/img (3).jpg",
+        width: 1037,
+        height: 691,
+      },
+    ],
     image: "/images/coworking/Espace Bulle Open space/img (1).jpg",
+    bookingLink: '/article-de-presse',
   },
   {
-    backgroundImage: "/images/other/hall bulle.jpg",
-    alt: "Description de l'image 1",
+    id: "evenement_a_venir",
+    title: "Événements à venir",
+    subdescription: "Un espace de coworking moderne et lumineux.",
+    description: [
+      "Un événement qui a rassemblé les passionnés et créé des souvenirs inoubliables !",
+    ],
+    images: [
+      {
+        src: "/images/galerie/evenements/even1.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even2.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even3.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even4.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even5.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even6.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even7.jpg",
+        width: 1037,
+        height: 691,
+
+      },
+      {
+        src: "/images/galerie/evenements/even8.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even9.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even10.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even11.jpg",
+        width: 1037,
+        height: 691,
+      },
+      {
+        src: "/images/galerie/evenements/even12.jpg",
+        width: 1037,
+        height: 691,
+      },
+    ],
+    image: "/images/coworking/Espace Bulle Open space/img (1).jpg",
+    bookingLink: '/espace-bulle-open-space',
   },
 ];
 

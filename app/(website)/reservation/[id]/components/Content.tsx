@@ -37,6 +37,7 @@ export default function Content({ group, space }: { group: any; space: any }) {
   const [totalAmount, setTotalAmount] = useState<number>(0);
   const [data, setData] = useState<any>();
   const [isMonthlyTarif, setIsMonthlyTarif] = useState(false);
+  
   const {
     register,
     handleSubmit,
@@ -51,8 +52,10 @@ export default function Content({ group, space }: { group: any; space: any }) {
       ?.items?.find((i) => i.id === space.id) || space;
   const hasTarifs = selectedSpace.tarifs && selectedSpace.tarifs.length > 0;
 
+  // Fonction pour calculer le montant total
   const calculateAmount = (tarifString: string, dates: Date[]): number => {
     if (!tarifString) return 0;
+    
     const [tarifGroupName, tarifItemTitle] = tarifString.split("|");
     const tarifGroup = selectedSpace.tarifs.find(
       (t: any) => t.name === tarifGroupName
@@ -60,6 +63,7 @@ export default function Content({ group, space }: { group: any; space: any }) {
     const tarifItem = tarifGroup?.items.find(
       (item: any) => item.title === tarifItemTitle
     );
+    
     if (!tarifItem) return 0;
 
     const price = parseInt(tarifItem.price.replace(/\D/g, ""));
@@ -96,7 +100,7 @@ export default function Content({ group, space }: { group: any; space: any }) {
           },
           body: JSON.stringify({
             subject: "Demande de réservation Novis Coworking",
-            to: [data.email, "petronildaga@gmail.com"],
+            to: [data.email, "info@noviscoworking.com"],
             emailData: {
               coworkingName: space.title,
               category: group.title,
@@ -115,13 +119,7 @@ export default function Content({ group, space }: { group: any; space: any }) {
           throw new Error("Failed to send email");
         }
         router.push(
-          `/recap?type=reservation&name=${encodeURIComponent(
-            data.name
-          )}&email=${encodeURIComponent(data.email)}&phone=${encodeURIComponent(
-            data.phone
-          )}&groupId=${group.id}&spaceId=${space.id}&dates=${formatDates(
-            dates
-          )}&tarif=${encodeURIComponent(selectedTarif)}`
+          `/recap?type=reservation&name=${encodeURIComponent(data.name)}&email=${encodeURIComponent(data.email)}&phone=${encodeURIComponent(data.phone)}&groupId=${group.id}&spaceId=${space.id}&dates=${formatDates(dates)}&tarif=${encodeURIComponent(selectedTarif)}`
         );
       } catch (error) {
         toast("Erreur", {
@@ -132,11 +130,9 @@ export default function Content({ group, space }: { group: any; space: any }) {
   };
 
   const formatDates = (dates: Date[]): string => {
-    if (isMonthlyTarif) {
-      return dates.map((d) => dayjs(d).format("YYYY-MM")).join(",");
-    } else {
-      return dates.map((d) => dayjs(d).format("YYYY-MM-DD")).join(",");
-    }
+    return isMonthlyTarif
+      ? dates.map((d) => dayjs(d).format("YYYY-MM")).join(",")
+      : dates.map((d) => dayjs(d).format("YYYY-MM-DD")).join(",");
   };
 
   useEffect(() => {
@@ -177,21 +173,12 @@ export default function Content({ group, space }: { group: any; space: any }) {
             throw new Error("Failed to send email");
           }
           router.push(
-            `/recap?type=payment&name=${encodeURIComponent(
-              data.name
-            )}&email=${encodeURIComponent(
-              data.email
-            )}&phone=${encodeURIComponent(data.phone)}&groupId=${
-              group.id
-            }&spaceId=${space.id}&dates=${formatDates(
-              dates
-            )}&amount=${totalAmount}&tarif=${encodeURIComponent(selectedTarif)}`
+            `/recap?type=payment&name=${encodeURIComponent(data.name)}&email=${encodeURIComponent(data.email)}&phone=${encodeURIComponent(data.phone)}&groupId=${group.id}&spaceId=${space.id}&dates=${formatDates(dates)}&amount=${totalAmount}&tarif=${encodeURIComponent(selectedTarif)}`
           );
         })
-        .catch((error) => {
+        .catch(() => {
           toast("Erreur", {
-            description:
-              "Une erreur est survenue lors de l'envoi de la facture",
+            description: "Une erreur est survenue lors de l'envoi de la facture",
           });
         });
     } else if (paymentStatus === "error") {
@@ -281,7 +268,7 @@ export default function Content({ group, space }: { group: any; space: any }) {
                   onValueChange={(value) => {
                     setSelectedTarif(value);
                     setIsMonthlyTarif(value.toLowerCase().includes("mois"));
-                    setDates([]); // Reset dates when tarif changes
+                    setDates([]); // Réinitialiser les dates lors du changement de tarif
                   }}
                 >
                   <SelectTrigger>
@@ -313,15 +300,13 @@ export default function Content({ group, space }: { group: any; space: any }) {
             )}
             <div className="grid gap-3">
               <Label htmlFor="date">
-                {isMonthlyTarif
-                  ? "Choisissez les mois"
-                  : "Choisissez les dates"}
+                {isMonthlyTarif ? "Choisissez les mois" : "Choisissez les dates"}
               </Label>
               <Calendar
                 id="date"
                 mode="multiple"
                 selected={dates}
-                onSelect={(days) => setDates(days ? days : [new Date()])}
+                onSelect={(days) => setDates(days || [new Date()])}
                 numberOfMonths={2}
                 className="rounded-md border"
                 disabled={(date) =>

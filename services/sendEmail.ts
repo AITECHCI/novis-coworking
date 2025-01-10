@@ -15,18 +15,20 @@ export async function sendEmail({
 }) {
   try {
     const { data, error } = await resend.emails.send({
-      from: "petronildaga@gmail.com",
+      from: "contact@noviscoworking.com",
       to: to,
       subject: subject,
       react: react,
     });
 
     if (error) {
-      console.error(error);
+      // Vérifiez si 'error' a une propriété 'message'
+      throw new Error(error.message || "Erreur lors de l'envoi de l'email");
     }
 
     console.log("Email envoyé avec succès:", data);
   } catch (error) {
     console.error("Erreur lors de l'envoi de l'email", error);
+    throw error; // Relancer l'erreur pour qu'elle soit capturée par l'appelant
   }
 }

@@ -12,7 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { galery } from "@/config/data";
+import { galeries } from "@/config/data";
 
 export default function SolutionsCarousel() {
   return (
@@ -23,7 +23,7 @@ export default function SolutionsCarousel() {
       className="w-full max-w-7xl mx-auto"
     >
       <CarouselContent>
-        {galery.map((data, index) => (
+        {galeries.map((data, index) => (
           <CarouselItem
             key={index}
             className="sm:basis-1/2 relative lg:basis-1/4 sm:mx-2 lg:mx-1"
@@ -36,7 +36,7 @@ export default function SolutionsCarousel() {
                     <Image
                       className="object-cover"
                       src={data.image || '/default-image.jpg'} // Image par défaut
-                      alt={data.alt || 'Image par défaut'} // Texte alternatif par défaut
+                      alt={data.image || 'Image par défaut'} // Texte alternatif par défaut
                       fill
                     />
                   </CardHeader>

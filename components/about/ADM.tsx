@@ -3,7 +3,6 @@ import React from 'react'
 import GridPattern from "@/components/magicui/grid-pattern";
 import { cn } from "@/lib/utils";
 
-
 export default function ADM() {
     return (
         <section className="container min-h-[300px] py-14 relative">

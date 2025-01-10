@@ -54,26 +54,6 @@ const FormulaReservationCard = ({ formula }: { formula: Formula }) => {
     mode: "onChange",
   });
 
-  const getDatesBasedOnPeriod = () => {
-    const today = new Date();
-    switch (formula.period) {
-      case "1 year":
-        return [
-          new Date(today.getFullYear() + 1, today.getMonth(), today.getDate()),
-        ];
-      case "6 month":
-        return [
-          new Date(today.getFullYear(), today.getMonth() + 6, today.getDate()),
-        ];
-      case "1 month":
-        return [
-          new Date(today.getFullYear(), today.getMonth() + 1, today.getDate()),
-        ];
-      default:
-        return [today];
-    }
-  };
-
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
     setIsLoading(true);
     try {
@@ -84,10 +64,10 @@ const FormulaReservationCard = ({ formula }: { formula: Formula }) => {
         },
         body: JSON.stringify({
           subject: `Demande de réservation Formule ${formula.name}`,
-          to: [data.email,"petronildaga@gmail.com"],
+          to: [data.email, "info@noviscoworking.com"],
           emailData: {
             formulaName: formula.name,
-            formulaImage:formula.image,
+            formulaImage: formula.image,
             clientName: data.name,
             clientEmail: data.email,
             clientPhone: data.phone,
@@ -99,16 +79,12 @@ const FormulaReservationCard = ({ formula }: { formula: Formula }) => {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to send email");
+        throw new Error("Échec de l'envoi de la demande");
       }
 
-      toast("Succès", {
-        description: "Votre demande de réservation a été envoyée avec succès",
-      });
+      toast.success("Votre demande de réservation a été envoyée avec succès");
     } catch (error) {
-      toast("Erreur", {
-        description: "Une erreur est survenue lors de l'envoi de la demande",
-      });
+      toast.error("Une erreur est survenue lors de l'envoi de la demande");
     } finally {
       setIsLoading(false);
     }
@@ -125,9 +101,7 @@ const FormulaReservationCard = ({ formula }: { formula: Formula }) => {
       />
       <div className="text-center space-y-4">
         <CardHeader>
-          <CardTitle
-            className={`text-3xl md:text-5xl font-bold ${formula.color}`}
-          >
+          <CardTitle className={`text-3xl md:text-5xl font-bold ${formula.color}`}>
             FORMULE {formula.name}
           </CardTitle>
           <CardDescription className="text-xl md:text-2xl text-muted-foreground">
@@ -167,8 +141,7 @@ const FormulaReservationCard = ({ formula }: { formula: Formula }) => {
             <DialogHeader>
               <DialogTitle>Réservation Formule {formula.name}</DialogTitle>
               <DialogDescription>
-                Veuillez remplir les informations pour votre demande de
-                réservation.
+                Veuillez remplir les informations pour votre demande de réservation.
               </DialogDescription>
             </DialogHeader>
             <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4 py-4">
@@ -180,7 +153,7 @@ const FormulaReservationCard = ({ formula }: { formula: Formula }) => {
                   {...register("name", { required: true })}
                   aria-invalid={errors.name ? "true" : "false"}
                 />
-                {errors.name?.type === "required" && (
+                {errors.name && (
                   <p role="alert" className="text-red-500">
                     Nom & Prénom sont requis
                   </p>
@@ -194,7 +167,7 @@ const FormulaReservationCard = ({ formula }: { formula: Formula }) => {
                   {...register("email", { required: true })}
                   aria-invalid={errors.email ? "true" : "false"}
                 />
-                {errors.email?.type === "required" && (
+                {errors.email && (
                   <p role="alert" className="text-red-500">
                     Email est requis
                   </p>
@@ -208,7 +181,7 @@ const FormulaReservationCard = ({ formula }: { formula: Formula }) => {
                   {...register("phone", { required: true })}
                   aria-invalid={errors.phone ? "true" : "false"}
                 />
-                {errors.phone?.type === "required" && (
+                {errors.phone && (
                   <p role="alert" className="text-red-500">
                     Téléphone est requis
                   </p>
@@ -223,22 +196,9 @@ const FormulaReservationCard = ({ formula }: { formula: Formula }) => {
                   disabled={(date) => date < new Date()}
                   initialFocus
                 />
-                {formula.period === "1 year" && (
+                {formula.period && (
                   <p className="text-sm text-muted-foreground">
-                    La période de réservation est d&apos;un an à partir de la
-                    date sélectionnée.
-                  </p>
-                )}
-                {formula.period === "6 month" && (
-                  <p className="text-sm text-muted-foreground">
-                    La période de réservation est de 6 mois à partir de la date
-                    sélectionnée.
-                  </p>
-                )}
-                {formula.period === "1 month" && (
-                  <p className="text-sm text-muted-foreground">
-                    La période de réservation est d&apos;un mois à partir de la
-                    date sélectionnée.
+                    La période de réservation est de {formula.period} à partir de la date sélectionnée.
                   </p>
                 )}
               </div>

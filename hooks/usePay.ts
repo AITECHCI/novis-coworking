@@ -17,8 +17,8 @@ export function usePay() {
         setPaymentStatus("loading");
         const data_params: any = {
           ...paymentData,
-          sandbox: true,
-          api_key: process.env.NEXT_PUBLIC_KKIAPAY_PUBLIC_API_KAY!,
+          api_key: process.env.NEXT_PUBLIC_KKIAPAY_PUBLIC_API_KEY!,
+          theme: "#ce6109", // Couleur orange en hexadécimal
         };
         openKkiapayWidget(data_params);
       }
@@ -54,7 +54,5 @@ export function usePay() {
   return {
     open,
     paymentStatus,
-    successHandler,
-    failureHandler,
   };
 }

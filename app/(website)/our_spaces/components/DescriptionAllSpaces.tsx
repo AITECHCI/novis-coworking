@@ -13,7 +13,7 @@ export default function DescriptionAllSpaces() {
             <TitleSection title={"Nos différents espaces situés à Cocody"} />
 
             <div className="relative gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-                <img className="w-full" src="/images/coworking/Bureaux privés/Bureau confiance/img (1).jpg" alt="dashboard image" />
+                <img className="w-full" src="/images/coworking/Bureaux%20priv%C3%A9s/Bureau%20confiance/img%20(1).jpg" alt="dashboard image" />
                 <div className="mt-4 md:mt-0">
                     <h2 className="mb-4  text-2xl md:text-4xl tracking-tight font-saudagar">Bureaux privés</h2>
                     <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
@@ -57,11 +57,11 @@ export default function DescriptionAllSpaces() {
                         </div>
                     </Link>
                 </div>
-                <img className="w-full" src="/images/coworking/Espace Bulle Open space/img (1).jpg" alt="dashboard image" />
+                <img className="w-full" src="/images/coworking/Espace%20Bulle%20Open%20space/img%20(1).jpg" alt="dashboard image" />
             </div>
 
             <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-                <img className="w-full" src="/images/coworking/Salle de réunion/img (1).jpg" alt="dashboard image" />
+                <img className="w-full" src="/images/coworking/Salle%20de%20réunion/img%20(1).jpg" alt="dashboard image" />
                 <div className="mt-4 md:mt-0">
                     <h2 className="mb-4  text-2xl md:text-4xl tracking-tight font-saudagar">Salle de réunion</h2>
                     <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
@@ -105,7 +105,7 @@ export default function DescriptionAllSpaces() {
                         </div>
                     </Link>
                 </div>
-                <img className="w-full" src="/images/coworking/Espace commun/img (1).jpg" alt="dashboard image" />
+                <img className="w-full" src="/images/coworking/Espace%20commun/img%20(1).jpg" alt="dashboard image" />
             </div>
 
             {/* <div className="bg-black">

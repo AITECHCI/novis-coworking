@@ -41,8 +41,8 @@ export default function Footer() {
           <div className="text-white">
             <h3 className="text-lg font-semibold uppercase">{menuList[1].menus[0].label}</h3>
             <div className="mt-2 grid grid-cols-2 md:grid-cols-1">
-              {menuList[1].menus[0].submenus.slice(1).map((item) => (
-                <Link key={item.label} href={item.href} className="hover:font-semibold transition-all duration-200">
+              {menuList[1].menus[0].submenus.slice(1).map((item, index) => (
+                <Link key={`submenu-${index}`} href={item.href} className="hover:font-semibold transition-all duration-200">
                   {item.label}
                 </Link>
               ))}
@@ -51,8 +51,8 @@ export default function Footer() {
           <div className="text-white">
             <h3 className="text-lg font-semibold uppercase">{menuList[2].menus[0].label}</h3>
             <div className="mt-2 grid grid-cols-2 md:grid-cols-1">
-              {menuList[2].menus[0].submenus.map((item) => (
-                <Link key={item.label} href={item.href} className="hover:font-semibold transition-all duration-200">
+              {menuList[2].menus[0].submenus.map((item, index) => (
+                <Link key={`submenu-${index}`} href={item.href} className="hover:font-semibold transition-all duration-200">
                   {item.label}
                 </Link>
               ))}
@@ -61,11 +61,11 @@ export default function Footer() {
           <div className="text-white">
             <h3 className="text-lg font-semibold">NOVIS CO-WORKING</h3>
             <div className="mt-2 grid grid-cols-2 md:grid-cols-1">
-              <Link href={menuList[3].menus[0].href} className="hover:font-semibold transition-all duration-200">
+              <Link key="menu-3-0" href={menuList[3].menus[0].href} className="hover:font-semibold transition-all duration-200">
                 {menuList[3].menus[0].label}
               </Link>
-              <Link href={menuList[4].menus[0].href} className="hover:font-semibold transition-all duration-200">
-                {menuList[4].menus[0].label}
+              <Link key="menu-5-0" href={menuList[5].menus[0].href} className="hover:font-semibold transition-all duration-200">
+                {menuList[5].menus[0].label}
               </Link>
             </div>
           </div>
