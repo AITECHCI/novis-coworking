@@ -30,7 +30,7 @@ export const ContactEmail: React.FC<ContactEmailData> = ({
     <Preview>Nouveau message de contact de {name}</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img
+        <Image
           src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/logo.png`}
           width="100"
           height="100"

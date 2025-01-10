@@ -43,7 +43,7 @@ export const InvoiceEmail: React.FC<EmailData> = ({
     <Preview>Facture pour votre réservation chez Novis Coworking</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img
+        <Image
           src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/logo.png`}
           width="100"
           height="100"
@@ -52,7 +52,7 @@ export const InvoiceEmail: React.FC<EmailData> = ({
         />
         <Heading style={heading}>Facture de réservation</Heading>
         <Section style={section}>
-          <Img
+          <Image
             src={`${process.env.NEXT_PUBLIC_BASE_URL}${coworkingImage}`}
             width="600"
             height="300"

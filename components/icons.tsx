@@ -51,7 +51,7 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons: any = {
   logo: ({ className, ...props }: { className: string }) => (
-    <img
+    <Image
       src="/images/logo.png"
       alt="NOVIS CO-WORKING"
       className={className}
@@ -59,7 +59,7 @@ export const Icons: any = {
     />
   ),
   logo_rogner: ({ className, ...props }: { className: string }) => (
-    <img
+    <Image
       src="/images/logo_1.png"
       alt="NOVIS CO-WORKING"
       className={className}
@@ -67,7 +67,7 @@ export const Icons: any = {
     />
   ),
   logo_black: ({ className, ...props }: { className: string }) => (
-    <img
+    <Image
       src="/images/logo-1.png"
       alt="NOVIS CO-WORKING"
       className={className}
@@ -75,7 +75,7 @@ export const Icons: any = {
     />
   ),
   logo_black_rogner: ({ className, ...props }: { className: string }) => (
-    <img
+    <Image
       src="/images/logo-1_1.png"
       alt="NOVIS CO-WORKING"
       className={className}
