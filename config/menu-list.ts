@@ -75,12 +75,12 @@ export function getMenuList(pathname: string): Group[] {
     
     {
       groupLabel: "",
-      href: "/our_galeries",
+      href: "/our_offers1",
       label: "Galerie",
       icon: Icons.galerie,
       submenus: [
-          { href: "/our_galeries/evenement_collaboratif", label: "Événement Collaboratif", active: pathname === "/our_galeries/evenement_collaboratif" },
-          { href: "/our_galeries/article_de_presse", label: "Article de Presse", active: pathname === "/our_galeries/Article de Presse" },
+          { href: "/our_offers1/domiciliation_virtuelle_entreprise", label: "Domiciliation Virtuelle", active: pathname === "/our_offers1/domiciliation_virtuelle_entreprise" },
+          { href: "/our_offers1/domiciliation_physique_entreprise", label: "Article de Presse", active: pathname === "/our_offers1/domiciliation_physique_entreprise" },
           { href: "", label: "Événements à venir", active: pathname === "" },
 
       ]
