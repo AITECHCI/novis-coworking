@@ -4,7 +4,7 @@ import DescriptionAllSpaces from "@/components/offers/DescriptionAllSpaces";
 import { offres } from "@/config/data";
 
 export default async function OfferPage({ params }: { params: { offer_id: string } }) {
-  const { offer_id } = await  params; // Attendre params ici
+  const { offer_id } = params; // Pas besoin d'attendre params ici
   const offre = offres.find((offre) => offre.id === offer_id); // Comparaison stricte
 
   return (
