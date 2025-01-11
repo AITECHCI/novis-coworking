@@ -1,9 +1,10 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Image from "next/image";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
+
 
 interface ImageProps {
   src: string;
@@ -21,17 +22,17 @@ export default function DescriptionAllSpaces({ galerie }: { galerie: Galerie }) 
   const [isOpen, setIsOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
-  const handleImageClick = (index: number) => {
+  const handleImageClick = useCallback((index: number) => {
     setSelectedImageIndex(index);
     setIsOpen(true);
-  };
+  }, []);
 
-  const closeModal = () => {
+  const closeModal = useCallback(() => {
     setIsOpen(false);
     setSelectedImageIndex(null);
-  };
+  }, []);
 
-  const handleKeyDown = (event: React.KeyboardEvent) => {
+  const handleKeyDown = useCallback((event: React.KeyboardEvent) => {
     if (event.key === "Escape") {
       closeModal();
     } else if (event.key === "ArrowRight") {
@@ -39,13 +40,11 @@ export default function DescriptionAllSpaces({ galerie }: { galerie: Galerie }) 
     } else if (event.key === "ArrowLeft") {
       setSelectedImageIndex((prev) => (prev !== null && prev > 0 ? prev - 1 : prev));
     }
-  };
+  }, [closeModal, galerie.images.length]);
 
   return (
     <section className="container mx-auto p-8">
       <div className="relative gap-8 items-center md:items-stretch py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 sm:py-16 lg:px-6">
-        
-        {/* Informations sur la galerie */}
         <div className="mt-4 md:mt-0">
           <h2 className="mb-4 text-2xl md:text-4xl tracking-tight font-saudagar">
             {galerie.title}
@@ -57,10 +56,9 @@ export default function DescriptionAllSpaces({ galerie }: { galerie: Galerie }) 
           ))}
         </div>
 
-        {/* Tableau d'images */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {galerie.images.map((image, index) => (
-            <Card key={index} className="group/solution_item cursor-pointer" onClick={() => handleImageClick(index)}>
+            <Card key={image.src} className="group/solution_item cursor-pointer" onClick={() => handleImageClick(index)}>
               <CardContent className="flex relative w-full h-64">
                 <CardHeader className="w-full h-full overflow-hidden">
                   <Image
@@ -77,7 +75,6 @@ export default function DescriptionAllSpaces({ galerie }: { galerie: Galerie }) 
         </div>
       </div>
 
-      {/* Modal d'image agrandie */}
       {isOpen && selectedImageIndex !== null && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" 
@@ -98,7 +95,6 @@ export default function DescriptionAllSpaces({ galerie }: { galerie: Galerie }) 
               width={800}
               height={600}
             />
-            {/* Navigation */}
             {selectedImageIndex > 0 && (
               <div 
                 className="absolute left-0 top-1/2 transform -translate-y-1/2 p-4 text-white cursor-pointer" 
